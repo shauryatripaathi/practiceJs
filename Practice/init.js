@@ -1,1 +1,6 @@
-document.getElementById("container").innerHTML = "page is using javascript";
+let container = document.getElementById("container");
+let btn = document.createElement('button');
+btn.id = 'buttonId';
+btn.innerHTML = 'click here';
+container.append(btn);
+
