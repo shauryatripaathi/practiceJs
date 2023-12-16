@@ -18,7 +18,33 @@ body{
 
 #navBar{
     background-color: black;
-    width:fit-content;
+    color: chocolate;
+}
+
+#droplist{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-indent: 50px;
+    list-style-type: none;
+}
+
+#topNav{
+   background-color: black;
+}
+
+#dropList{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    text-indent: 20px;
+    flex-wrap: nowrap;
+    color: white;
+    list-style-type: none;
+}
+a{
+    color: yellow;
+    text-decoration: none;
 }
 
 #myCanvas{

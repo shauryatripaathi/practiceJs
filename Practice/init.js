@@ -6,9 +6,16 @@ container.append(btn);
 
 let navBar = document.createElement("nav");
 navBar.id = "navBar";
-navBar.innerHTML = 'hello';
+let dropList = document.createElement("ul");
+dropList.id = 'droplist';
+let home = document.createElement("li")
+home.innerHTML = 'Home';
+dropList.appendChild(home)
+let contact = document.createElement("li")
+contact.innerHTML = 'contact';
+dropList.appendChild(contact)
+navBar.append(dropList);
 container.append(navBar);
-
 
 let c = document.getElementById('myCanvas');
 const ctx = c.getContext("2d")
