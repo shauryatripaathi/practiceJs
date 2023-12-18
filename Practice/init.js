@@ -7,10 +7,14 @@ container.append(btn);
 let navBar = document.createElement("nav");
 navBar.id = "navBar";
 let dropList = document.createElement("ul");
-dropList.id = 'droplist';
-let home = document.createElement("li")
-home.innerHTML = 'Home';
-dropList.appendChild(home)
+dropList.id = 'secondDroplist';
+let homeButton = document.createElement("li")
+let home = document.createElement('a');
+let homeText = document.createTextNode("Home");
+home.appendChild(homeText);
+home.href = '#home';
+homeButton.appendChild(home);
+dropList.appendChild(homeButton);
 let contact = document.createElement("li")
 contact.innerHTML = 'contact';
 dropList.appendChild(contact)
@@ -38,4 +42,12 @@ function handleOnBtn(){
 }
 btn.addEventListener("click",handleOnBtn);
 
+function handleOnHome(){
+let dropMenu = document.createElement("div");
+dropMenu.id = "dropMenu";
+dropMenu.innerHTML = "page";
+container.appendChild(dropMenu);
+}
+
+home.addEventListener("click",handleOnHome);
 

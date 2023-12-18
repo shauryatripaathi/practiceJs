@@ -21,7 +21,7 @@ body{
     color: chocolate;
 }
 
-#droplist{
+#secondDroplist{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -51,4 +51,10 @@ a{
     width: 300px;
     height: 150px;
     border: 1px black;
+}
+
+#dropMenu{
+    width: 100px;
+    height: 400px;
+    background-color: white;
 }
