@@ -42,12 +42,23 @@ function handleOnBtn(){
 }
 btn.addEventListener("click",handleOnBtn);
 
-function handleOnHome(){
 let dropMenu = document.createElement("div");
 dropMenu.id = "dropMenu";
 dropMenu.innerHTML = "page";
 container.appendChild(dropMenu);
+dropMenu.style.visibility = "hidden";
+
+function handleOnHome(){
+    if (dropMenu.style.visibility == "hidden"){
+        dropMenu.style.visibility = "visible";
+    }
+    else{
+        dropMenu.style.visibility = "hidden";
+    }
 }
+home.addEventListener("mouseover",handleOnHome);
 
-home.addEventListener("click",handleOnHome);
-
+function handleOnDropMenu(){
+    dropMenu.style.visibility = "hidden";
+}
+dropMenu.addEventListener("click",handleOnDropMenu);
