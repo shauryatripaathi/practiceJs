@@ -21,6 +21,7 @@ dropList.appendChild(contact)
 navBar.append(dropList);
 container.append(navBar);
 
+/*
 let c = document.getElementById('myCanvas');
 const ctx = c.getContext("2d")
 ctx.beginPath();
@@ -31,6 +32,7 @@ ctx.fillStyle = 'orange';
 ctx.fill();
 ctx.strokeStyle = 'white';
 ctx.stroke();
+*/
 
 function handleOnBtn(){
     
@@ -44,7 +46,18 @@ btn.addEventListener("click",handleOnBtn);
 
 let dropMenu = document.createElement("div");
 dropMenu.id = "dropMenu";
-dropMenu.innerHTML = "page";
+let headingOne = document.createElement("a");
+let headingOneTxt = document.createTextNode("Page Info");
+headingOne.appendChild(headingOneTxt);
+headingOne.href = "https://www.w3schools.com/js/js_htmldom.asp";
+dropMenu.appendChild(headingOne);
+
+let headingSec = document.createElement("a");
+let headingSecTxt = document.createTextNode("Search");
+headingSec.appendChild(headingSecTxt);
+headingSec.href = "#Search";
+dropMenu.appendChild(headingSec);
+
 container.appendChild(dropMenu);
 dropMenu.style.visibility = "hidden";
 
@@ -62,3 +75,8 @@ function handleOnDropMenu(){
     dropMenu.style.visibility = "hidden";
 }
 dropMenu.addEventListener("click",handleOnDropMenu);
+
+let formList = document.createElement("form");
+formList.name = "myForm";
+formList.action = "#action.php";
+formList.onsubmit =  validateForm();

@@ -1,11 +1,13 @@
 body{
     background-color: saddlebrown;
-    margin: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 #container{
     color: white;
-    padding: 10px;
+    box-sizing: border-box;
 }
 
 #circleElementId{
@@ -18,7 +20,11 @@ body{
 
 #navBar{
     background-color: black;
-    color: chocolate;
+    color: teal;
+    a{
+        color:teal;
+        text-decoration: none;
+    }
 }
 
 #secondDroplist{
@@ -27,24 +33,28 @@ body{
     justify-content: start;
     text-indent: 50px;
     list-style-type: none;
+    padding: 0;
 }
 
 #topNav{
    background-color: black;
+   padding-top: 1px;
+   padding-bottom: 1px;
 }
 
 #dropList{
     display: flex;
     flex-direction: row;
     justify-content: start;
-    text-indent: 20px;
+    column-gap: 30px;
     flex-wrap: nowrap;
     color: white;
     list-style-type: none;
-}
+    
 a{
     color: yellow;
     text-decoration: none;
+}
 }
 
 #myCanvas{
@@ -56,6 +66,16 @@ a{
 #dropMenu{
     width: 100px;
     height: 200px;
+    margin-top: -17px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
     background-color: white;
     border: 1px black;
+    padding: 10px;
+    color: brown;
+    a{
+        color: red;
+        text-decoration: none;
+    }
 }
