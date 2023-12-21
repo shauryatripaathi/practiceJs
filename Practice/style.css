@@ -72,6 +72,8 @@ a{
     width: 170px; 
     height: 150px; 
     margin: 125px auto;
+    text-align: center;
+    font-size: 30px;
 }
 #tile1{
     max-height: 50px;

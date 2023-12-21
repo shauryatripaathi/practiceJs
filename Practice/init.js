@@ -65,6 +65,10 @@ dropMenu.addEventListener("click",handleOnDropMenu);
 
 */
 
+let gameHeading = document.createElement('h1');
+gameHeading.innerHTML = "TIC TAC TOE";
+container.append(gameHeading);
+
 let box = document.createElement("div");
 box.id = "box";
 container.append(box);
@@ -107,14 +111,10 @@ box.append(tile9);
 
 let n = 1;
 let moveX = 'x';
-let moveO = 'o'
-let img = document.createElement('img');
-img.style.width = '50px';
-img.style.height = '50px';
-img.src = './panda.jpg';
+let moveO = 'o';
+
 
 function handleOnBox(e){
-    alert(e.target.id);
     if(e.target.innerText == 'x'){
         alert('Choose different tile');
     }
@@ -126,17 +126,68 @@ function handleOnBox(e){
     }
     else if(n%2 == 1){
         e.target.innerText = moveX;
-        alert(e.target.innerText);
-        console.log(e.target.innerText)
-        tile1.append(img);
+        console.log(e.target.innerText);
+        e.target.style.backgroundColor = 'red';
         n = n+1;
     }
     else if(n%2 == 0){
         e.target.innerText = moveO;
-        alert(e.target.innerText);
-        console.log(e.target.innerText)
+        console.log(e.target.innerText);
+        e.target.style.backgroundColor = 'green';
         n = n+1;
-     }
+    }
+    check();
 }
 box.addEventListener("click",handleOnBox);
+
+function check(){
+    if(tile1.innerText == tile2.innerText && tile2.innerText == tile3.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile1.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile1.innerText == tile4.innerText && tile4.innerText == tile7.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile1.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile1.innerText == tile5.innerText && tile5.innerText == tile9.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile1.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile2.innerText == tile5.innerText && tile5.innerText == tile8.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile2.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile3.innerText == tile5.innerText && tile5.innerText == tile7.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile3.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile3.innerText == tile6.innerText && tile6.innerText == tile9.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile3.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile4.innerText == tile5.innerText && tile5.innerText == tile6.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile4.innerText);
+            location.reload();
+        },100);
+    }
+    else if(tile7.innerText == tile8.innerText && tile8.innerText == tile9.innerText){
+        setTimeout(()=>{
+            alert("Game won by" + " " + tile7.innerText);
+            location.reload();
+        },100);
+    }
+}
 
