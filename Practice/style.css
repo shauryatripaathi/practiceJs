@@ -63,72 +63,76 @@ a{
 
 #box{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     border-style: dashed;
     border-color: black;
-    width: 1000px;
-    height: 500px;
+    margin-top: 50px;
+    margin-left: 500px;
+    width: 170px; 
+    height: 150px; 
+    margin: 125px auto;
 }
 #tile1{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile2{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile3{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile4{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile5{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile6{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile7{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile8{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
 #tile9{
-    height: 50px;
-    width: 50px;
+    max-height: 50px;
+    min-width: 50px;
     background-color: white;
-    border-style: dotted;
-    border-color: aqua;
+    border-style:double ;
+    border-color: black;
 }
