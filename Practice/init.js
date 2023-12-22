@@ -64,14 +64,18 @@ function handleOnDropMenu(){
 dropMenu.addEventListener("click",handleOnDropMenu);
 
 */
+let ticTacToeGame = document.createElement("div");
+ticTacToeGame.id = "ticTacToeGame";
+container.append(ticTacToeGame);
 
 let gameHeading = document.createElement('h1');
 gameHeading.innerHTML = "TIC TAC TOE";
-container.append(gameHeading);
+gameHeading.id = 'gameHeading';
+ticTacToeGame.append(gameHeading);
 
 let box = document.createElement("div");
 box.id = "box";
-container.append(box);
+ticTacToeGame.append(box);
 let tile1 = document.createElement("div");
 tile1.id = "tile1";
 box.append(tile1);
@@ -113,7 +117,6 @@ let n = 1;
 let moveX = 'x';
 let moveO = 'o';
 
-
 function handleOnBox(e){
     if(e.target.innerText == 'x'){
         alert('Choose different tile');
@@ -142,52 +145,96 @@ box.addEventListener("click",handleOnBox);
 
 function check(){
     if(tile1.innerText == tile2.innerText && tile2.innerText == tile3.innerText){
+        crossBarFunction('tile123')
         setTimeout(()=>{
             alert("Game won by" + " " + tile1.innerText);
             location.reload();
         },100);
     }
     else if(tile1.innerText == tile4.innerText && tile4.innerText == tile7.innerText){
+        crossBarFunction('tile147')
         setTimeout(()=>{
             alert("Game won by" + " " + tile1.innerText);
             location.reload();
         },100);
     }
     else if(tile1.innerText == tile5.innerText && tile5.innerText == tile9.innerText){
+        crossBarFunction('tile159')
         setTimeout(()=>{
             alert("Game won by" + " " + tile1.innerText);
             location.reload();
         },100);
     }
     else if(tile2.innerText == tile5.innerText && tile5.innerText == tile8.innerText){
+        crossBarFunction('tile258')
         setTimeout(()=>{
             alert("Game won by" + " " + tile2.innerText);
             location.reload();
         },100);
     }
     else if(tile3.innerText == tile5.innerText && tile5.innerText == tile7.innerText){
+        crossBarFunction('tile357')
         setTimeout(()=>{
             alert("Game won by" + " " + tile3.innerText);
             location.reload();
         },100);
     }
     else if(tile3.innerText == tile6.innerText && tile6.innerText == tile9.innerText){
+        crossBarFunction('tile369')
         setTimeout(()=>{
             alert("Game won by" + " " + tile3.innerText);
             location.reload();
         },100);
     }
     else if(tile4.innerText == tile5.innerText && tile5.innerText == tile6.innerText){
+        crossBarFunction('tile456')
         setTimeout(()=>{
             alert("Game won by" + " " + tile4.innerText);
             location.reload();
         },100);
     }
     else if(tile7.innerText == tile8.innerText && tile8.innerText == tile9.innerText){
+        crossBarFunction('tile789')
         setTimeout(()=>{
             alert("Game won by" + " " + tile7.innerText);
             location.reload();
         },100);
     }
-}
+};
 
+function crossBarFunction(groupWon){
+    let crossBar = document.createElement("div");
+    crossBar.id = "crossBar";
+    box.append(crossBar);
+    if(groupWon == 'tile123'){
+        crossBar.style.marginTop = '25px';
+    }
+    else if(groupWon == 'tile456'){
+        crossBar.style.marginTop = '75px';
+    }
+    else if(groupWon == 'tile789'){
+        crossBar.style.marginTop = '125px';
+    }
+    else if(groupWon == 'tile147'){
+        crossBar.style.rotate = '90deg'
+        crossBar.style.marginTop = '75px';
+        crossBar.style.marginRight = '110px';
+    }
+    else if(groupWon == 'tile258'){
+        crossBar.style.rotate = '90deg'
+        crossBar.style.marginTop = '75px';
+    }
+    else if(groupWon == 'tile369'){
+        crossBar.style.rotate = '90deg'
+        crossBar.style.marginTop = '75px';
+        crossBar.style.marginLeft = '110px';
+    }
+    else if(groupWon == 'tile159'){
+        crossBar.style.rotate = '45deg'
+        crossBar.style.marginTop = '75px';
+    }
+    else if(groupWon == 'tile357'){
+        crossBar.style.rotate = '135deg'
+        crossBar.style.marginTop = '75px';
+    }
+}

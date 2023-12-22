@@ -74,6 +74,7 @@ a{
     margin: 125px auto;
     text-align: center;
     font-size: 30px;
+    cursor: pointer;
 }
 #tile1{
     max-height: 50px;
@@ -137,4 +138,18 @@ a{
     background-color: white;
     border-style:double ;
     border-color: black;
+}
+
+#crossBar{
+    position: absolute;
+    max-height: 5px;
+    width: 253px;
+    background-color: black;
+    border-style:double ;
+    border-color: black;
+    z-index: 0;
+}
+
+#gameHeading{
+    margin-left: 400px;
 }
