@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+
+.navbar{
+  margin: 0%;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  background-color: black;
+  color: white;
+}
+
+.navLink{
+  text-decoration: none;
+  color: white;
+}
